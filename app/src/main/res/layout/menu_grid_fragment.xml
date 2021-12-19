@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuGridFragment"
+    >
+    <!-- AppBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar"
+            style="@style/Widget.Hotel.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:navigationIcon="@drawable/menu"
+            app:title="@string/app_name"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+    <!-- ScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:background="@color/productGridBackgroundColor"
+        android:elevation="8dp"
+        android:paddingStart="@dimen/product_grid_spacing"
+        android:paddingEnd="@dimen/product_grid_spacing"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="1dp">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:background="@color/text"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/product_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/product_title"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    />
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/product_description"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textAlignment="center"
+                    />
+
+            </LinearLayout>
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/product_"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@color/text"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/prodcuct_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/product_title"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+                <TextView
+                    android:id="@+id/prodcuct_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/product_description"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </LinearLayout>
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:layout_marginTop="-199dp"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="229dp"
+                android:background="@color/text"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginLeft="229dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/product_title"
+                    android:textAlignment="center"
+                    android:textAppearance="?attr/textAppearanceSubtitle2"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/product_description"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--android:layout_gravity="center_horizontal|end"-->
+</FrameLayout>
